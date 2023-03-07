@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&:wght@600display=swap");
+
+* {
+  margin: 0;
+  font-family: "Caveat", cursive;
+  font-weight: 800;
+  font-size: large;
+}
+
+body {
+  background-color: #fff;
+  background-image: linear-gradient(
+      0deg,
+      transparent,
+      transparent 99px,
+      #b0b0b0 99px,
+      #b0b0b0 99px
+    ),
+    linear-gradient(
+      90deg,
+      transparent,
+      transparent 99px,
+      #b0b0b0 99px,
+      #b0b0b0 99px
+    ),
+    linear-gradient(
+      0deg,
+      transparent,
+      transparent 49px,
+      #d0d0d0 49px,
+      #d0d0d0 49px
+    ),
+    linear-gradient(
+      90deg,
+      transparent,
+      transparent 49px,
+      #d0d0d0 49px,
+      #d0d0d0 49px
+    ),
+    linear-gradient(
+      0deg,
+      transparent,
+      transparent 9px,
+      #eaeaea 9px,
+      #eaeaea 9px
+    ),
+    linear-gradient(
+      90deg,
+      transparent,
+      transparent 9px,
+      #eaeaea 9px,
+      #eaeaea 9px
+    );
+  background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px, 10px 10px,
+    10px 10px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+#container {
+  overflow: hidden;
+  min-height: 600px;
+  min-width: 300px;
+  padding: 10px;
+  gap: 100px;
+}
+
+#notes,
+#bookmarks,
+#todos {
+  cursor: pointer;
+}
+
+#defaultOpen {
+  display: none;
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  flex-basis: 0;
+  gap: 20px;
+}
+
+.tab > button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  transition: 0.3s;
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.7));
+}
+
+.tab > button:hover {
+  background-color: #ddd;
+}
+
+.tab > button.active {
+  background-color: #ccc;
+}
+
+.content-container {
+  padding: 40px 10px;
+  height: auto;
+}
+
+.tab-content {
+  display: none;
+}
+
+/* welcome */
+
+.welcome-container {
+  height: 80vh;
+  overflow: hidden;
+}
+
+.welcome-image {
+  border-radius: 16px;
+}
+
+.welcome-text {
+  padding-top: 40px;
+  font-size: 40px;
+  text-align: center;
+}
+
+/* note */
+#notes-list {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.note-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-width: 325px;
+  min-height: 175px;
+  background: linear-gradient(
+    135deg,
+    var(--paper-dark),
+    30%,
+    var(--paper-color)
+  );
+  box-shadow: 3px 3px 2px var(--paper-shadow);
+  transform: rotate(10deg);
+  transform-origin: top left;
+  width: 320px;
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.7));
+}
+
+.note-text {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-align: center;
+}
+
+.note-card li {
+  margin: auto;
+}
+
+/* pin */
+.pin {
+  --pin-color: #d02627;
+  --pin-dark: #9e0608;
+  --pin-light: #fc7e7d;
+
+  position: absolute;
+  left: 20px;
+  width: 60px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.metal {
+  position: absolute;
+  width: 5px;
+  height: 20px;
+  background: linear-gradient(to right, #808080, 40%, #eae8e8, 50%, #808080);
+  border-radius: 0 0 30% 30%;
+  transform: rotate(50deg);
+  transform-origin: bottom left;
+  top: 15px;
+  border-bottom: 1px solid #808080;
+}
+
+.bottom-circle {
+  position: absolute;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--pin-color);
+  background: radial-gradient(
+    circle at bottom right,
+    var(--pin-light),
+    25%,
+    var(--pin-dark),
+    90%,
+    var(--pin-color)
+  );
+}
+
+/* Barrel */
+.bottom-circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -2px;
+  width: 20px;
+  height: 30px;
+  transform: rotate(55deg);
+  transform-origin: 100% 100%;
+  border-radius: 0 0 40% 40%;
+  background: linear-gradient(
+    to right,
+    var(--pin-dark),
+    30%,
+    var(--pin-color),
+    90%,
+    var(--pin-light)
+  );
+}
+
+/* Top circle */
+.bottom-circle::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: -5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at right,
+    var(--pin-light),
+    30%,
+    var(--pin-color),
+    var(--pin-dark) 80%
+  );
+}
+
+/* bookmarks */
+.bookmarks-container {
+  gap: 50px;
+}
+
+.form {
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#bookmark-link,
+#bookmark-purpose,
+#get-current-url {
+  width: 330px;
+}
+
+#bookmark-paper {
+  width: 330px;
+  height: auto;
+  position: relative;
+  margin: 20px auto;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  background-color: white;
+  /* box-shadow: 0px 0px 5px #888; */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  clip-path: inset(-5px -5px 0px 0px);
+}
+
+/* styling red vertical line */
+#bookmark-paper::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 40px;
+  background-color: rgba(255, 0, 0, 0.6);
+}
+
+/* styling blue horizontal lines */
+#bookmark-pattern {
+  height: 100%;
+  background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+}
+
+/* styling text content */
+#bookmark-text {
+  padding-top: 6px;
+  padding-left: 56px;
+  padding-right: 16px;
+  line-height: 24px;
+  font-family: cursive;
+  font-size: 15px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+
+#edit-bookmark-purpose {
+  cursor: pointer;
+}
+
+.fa-solid {
+  cursor: pointer;
+}
+
+#bookmarks-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.bookmark-cross {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+}
+
+.corner {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3em;
+  height: 3em;
+  background-color: #fff;
+}
+
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 3em 3em 0;
+  background-image: linear-gradient(
+      0deg,
+      transparent,
+      transparent 99px,
+      #b0b0b0 99px,
+      #b0b0b0 99px
+    ),
+    linear-gradient(
+      90deg,
+      transparent,
+      transparent 99px,
+      #b0b0b0 99px,
+      #b0b0b0 99px
+    ),
+    linear-gradient(
+      0deg,
+      transparent,
+      transparent 49px,
+      #d0d0d0 49px,
+      #d0d0d0 49px
+    ),
+    linear-gradient(
+      90deg,
+      transparent,
+      transparent 49px,
+      #d0d0d0 49px,
+      #d0d0d0 49px
+    ),
+    linear-gradient(
+      0deg,
+      transparent,
+      transparent 9px,
+      #eaeaea 9px,
+      #eaeaea 9px
+    ),
+    linear-gradient(
+      90deg,
+      transparent,
+      transparent 9px,
+      #eaeaea 9px,
+      #eaeaea 9px
+    );
+  background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px, 10px 10px,
+    10px 10px;
+  border-color: transparent #eae8e8 transparent transparent;
+}
+
+/* todos */
+#todos-content p,
+#todos-content a {
+  font-size: 25px;
+}

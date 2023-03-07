@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>अहन्य - an extension on a daily basis</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <meta name="description" content="A browser extension on a daily basis" />
+  <meta name="author" content="aminos & curios" />
+  <meta property="og:site_name" content="aminos & curios" />
+  <meta property="og:title" content="🔂 अहन्य - Ahanya" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="A browser extension on a daily basis" />
+  <meta property="og:url" content="https://devstrons.github.io/ahanya" />
+  <meta
+    property="og:image"
+    itemprop="image"
+    content="https://devstrons.github.io/ahanya/images/op.png"
+  />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="600" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta
+    property="twitter:image"
+    content="https://devstrons.github.io/ahanya/op.png"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div id="container">
+    <nav class="tab">
+      <button id="defaultOpen" class="tab-links" data-welcome>
+        WELCOME
+      </button>
+      <button id="notes" class="tab-links" data-notes>
+        NOTES
+      </button>
+      <button id="bookmarks" class="tab-links" data-bookmarks>
+        BOOKMARKS
+      </button>
+      <button id="todos" class="tab-links" data-todos>
+        TODOS
+      </button>
+    </nav>
+    <main class="content-container flex justify-center">
+      <div id="welcome-content" class="tab-content">
+        <div class="welcome-container flex-column justify-center items-center">
+          <img class="welcome-image" width="110%" src="./images/op.png" />
+          <p class="welcome-text">A browser extension on a daily basis!</p>
+        </div>
+      </div>
+      <div id="notes-content" class="tab-content">
+        <div class="flex justify-center">
+          <input id="note" type="text" placeholder="Enter your thoughts here..." />
+          <button id="save-notes">SAVE</button>
+        </div>
+        <ul id="notes-list" class="notes-list flex justify-center"></ul>
+      </div>
+      <div id="bookmarks-content" class="tab-content">
+        <div class="flex-column bookmarks-container justify-center">
+          <form id="bookmark-form" class="flex-column justify-center items-center" method="post">
+            <input type="text" id="bookmark-link" name="bookmark-link" placeholder="Enter link to bookmarks.."></input>
+            <br />
+            <input type="text" id="bookmark-purpose" name="bookmark-purpose" placeholder="What's the purpose?"></input>
+            <input type="submit" hidden />
+          </form>
+          <div class="flex items-center justify-center">
+            <button id="get-current-url">Get Current Window URL</button>
+          </div>
+          <div id="bookmarks-list"></div>
+        </div>
+      </div>
+      <div id="todos-content" class="tab-content">
+        <div class="flex justify-center items-center todos-container">
+          <p class="flex justify-center items-center">Coming soon by &nbsp; <a
+              href="https://github.com/curiosBasant">@curiosBasant</a>...</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
