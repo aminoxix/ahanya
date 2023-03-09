@@ -1,6 +1,6 @@
 <div align="center">
 <h1>🔂 अहन्य - A browser extension on a daily basis</h1>
-    <img src="./images/logo.png" width="210px" />
+    <img src="./images/op.png" width="100%" />
     <p>It eliminates the agony of utilizing many tools to track the productivity at different times while we've something that you can use in a site every day, and effortlessly integrates it into your browser.</p>
 </div>
 
@@ -40,7 +40,7 @@ Wanna contribute to our project, but don't know how to start? Check out our [**c
 
 ## 🛠 Building
 
-- `Go Live at bottom` — It automatically run the website locally
+- `Go Live 'at bottom of Visual Studio Code'` — It run the website locally in your browser (PORT: http://localhost:5500)
 
 <br />
 
@@ -50,4 +50,7 @@ Wanna contribute to our project, but don't know how to start? Check out our [**c
 
 <hr>
 
-> **YouTube** <a href="https://www.youtube.com/devstrons" target="_blank" rel="noopener">@devstrons</a> &nbsp;&middot;&nbsp; > **Instagram** <a href="https://www.instagram.com/devstrons" target="_blank" rel="noopener">@devstrons</a> &nbsp;&middot;&nbsp; > **Discord** <a href="https://discord.com/invite/MVujzTBqed" target="_blank" rel="noopener">DEVSTRONS'</a> &nbsp;&middot;&nbsp; > **Twitter** <a href="https://twitter.com/devstrons" target="_blank" rel="noopener">@devstrons</a>
+> **YouTube** <a href="https://www.youtube.com/devstrons" target="_blank" rel="noopener">@devstrons</a> &nbsp;&middot;&nbsp; 
+> **Instagram** <a href="https://www.instagram.com/devstrons" target="_blank" rel="noopener">@devstrons</a> &nbsp;&middot;&nbsp; 
+> **Discord** <a href="https://discord.com/invite/MVujzTBqed" target="_blank" rel="noopener">DEVSTRONS'</a> &nbsp;&middot;&nbsp; 
+> **Twitter** <a href="https://twitter.com/devstrons" target="_blank" rel="noopener">@devstrons</a>

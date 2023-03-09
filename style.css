@@ -76,9 +76,15 @@ body {
 #container {
   overflow: hidden;
   min-height: 600px;
-  min-width: 300px;
-  padding: 10px;
+  min-width: 375px;
+  padding-top: 10px;
   gap: 100px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 #notes,
@@ -144,6 +150,7 @@ body {
 #notes-list {
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 35px;
   gap: 20px;
   flex-wrap: wrap;
   max-width: 800px;
@@ -153,7 +160,6 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
-  min-width: 325px;
   min-height: 175px;
   background: linear-gradient(
     135deg,
@@ -179,6 +185,23 @@ body {
 
 .note-card li {
   margin: auto;
+}
+
+/* date & time */
+.date-time-gap {
+  gap: 2px;
+}
+
+.date-time-title {
+  font-size: 13px;
+}
+
+.date-time {
+  border: 2px solid #000;
+  border-radius: 8px;
+  width: fit-content;
+  padding: 2px 15px;
+  font-size: 15px;
 }
 
 /* pin */
@@ -282,7 +305,7 @@ body {
   width: 330px;
   height: auto;
   position: relative;
-  margin: 20px auto;
+  margin: auto;
   padding-top: 30px;
   padding-bottom: 10px;
   background-color: white;
@@ -305,15 +328,15 @@ body {
 /* styling blue horizontal lines */
 #bookmark-pattern {
   height: 100%;
-  background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+  background-image: repeating-linear-gradient(#0000 0px, #0000 24px, teal 25px);
 }
 
 /* styling text content */
 #bookmark-text {
   padding-top: 6px;
-  padding-left: 56px;
-  padding-right: 16px;
-  line-height: 24px;
+  padding-left: 50px;
+  padding-right: 10px;
+  line-height: 22.5px;
   font-family: cursive;
   font-size: 15px;
   letter-spacing: 1px;
@@ -335,12 +358,16 @@ body {
   max-width: 800px;
 }
 
+.bookmark-link {
+  text-decoration: none;
+}
+
 .bookmark-cross {
   cursor: pointer;
   position: absolute;
   right: 0;
   top: 0;
-  padding: 10px;
+  padding: 3px 5px;
 }
 
 .corner {
